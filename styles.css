@@ -178,7 +178,8 @@ tracks {
   height: 100%;
 }
 
-tracks loader {
+tracks loader,
+tracks blocker {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -190,6 +191,12 @@ tracks loader {
   background: var(--ui-color-white-alpha);
   backdrop-filter: blur(0.25rem);
   z-index: 999;
+}
+
+tracks blocker {
+  flex-direction: column;
+  display: none;
+  height: calc(100% - var(--ui-credits-height) - var(--ui-actions-height));
 }
 
 tracks label {

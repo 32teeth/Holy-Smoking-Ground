@@ -1,11 +1,11 @@
 
 <songs>
-  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolyGroundDrums.m4a' controls="controls" crossorigin="anonymous"></audio>
-  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolyGroundMusic.m4a' controls="controls" crossorigin="anonymous"></audio>
-  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolyGroundVocals.m4a' controls="controls" crossorigin="anonymous"></audio>
-  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolySmokeDrums.m4a' controls="controls" crossorigin="anonymous"></audio>
-  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolySmokeMusic.m4a' controls="controls" crossorigin="anonymous"></audio>
-  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolySmokeVocals.m4a' controls="controls" crossorigin="anonymous"></audio>
+  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolyGroundDrums.m4a' controls="controls" crossorigin="anonymous" preload="auto"></audio>
+  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolyGroundMusic.m4a' controls="controls" crossorigin="anonymous" preload="auto"></audio>
+  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolyGroundVocals.m4a' controls="controls" crossorigin="anonymous" preload="auto"></audio>
+  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolySmokeDrums.m4a' controls="controls" crossorigin="anonymous" preload="auto"></audio>
+  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolySmokeMusic.m4a' controls="controls" crossorigin="anonymous" preload="auto"></audio>
+  <audio src='https://32teeth.github.io/Holy-Smoking-Ground/audio/original/HolySmokeVocals.m4a' controls="controls" crossorigin="anonymous" preload="auto"></audio>
 </songs>
 <main>
   <header><taylor>taylor</taylor><maiden>maiden</maiden><songname>holy smoking ground</songname></header>
@@ -22,6 +22,11 @@
       </svg>
       Hang on, loading...
     </loader>
+    <blocker>
+      <h1>Click Start</h1>
+      <h2>to play the song</h2>
+      click on the tracks to mix
+    </blocker>
     <input id='vocals' type='checkbox'>
     <label for='vocals'>vocals</label>
     <input id='drums' type='checkbox'>
@@ -32,6 +37,7 @@
   <actions>
     <button class='material-symbols-outlined' id='reset'>skip_previous</button>
     <button class='material-symbols-outlined' id='play' state='false'>play_circle</button>
+    <button class='material-symbols-outlined' id='mix' state='false'>shuffle</button>
   </actions>
   <credits>
     <h1>

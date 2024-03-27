@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
   };
 
   const volumes = {
-    taylor: 0.75,
+    taylor: 0.7,
     maiden: 1,
   };
 
@@ -26,6 +26,7 @@ window.addEventListener('load', () => {
 
   let initialized = false;
   const init = () => {
+    document.querySelector('blocker').style.display = 'none';
     for (const track in tracks) {
       audio[track] = {};
       for (const part in tracks[track]) {
@@ -107,10 +108,20 @@ window.addEventListener('load', () => {
     });
   });
 
+  const mix = () => {
+    document.querySelectorAll('tracks input[type="checkbox"]').forEach(part => {
+      part.checked = Math.random() >= 0.5;
+      part.dispatchEvent(new Event('change'));
+    });
+  };
+
   document.querySelector('button#play').addEventListener('click', state);
   document.querySelector('button#reset').addEventListener('click', reset);
+  document.querySelector('button#mix').addEventListener('click', mix);
+
 
   setTimeout(() => {
     document.querySelector('loader').remove();
-  }, 100);
+    document.querySelector('blocker').style.display = 'flex';
+  }, 2500);
 });
