@@ -272,7 +272,7 @@ actions {
 actions button {
   border: none;
   background: none;
-  width: 50%;
+  width: calc(100 / 3 * 1%);
   height: 100%;
   cursor: pointer;
   font-size: calc(var(--ui-font-size-button) * 2) !important;
